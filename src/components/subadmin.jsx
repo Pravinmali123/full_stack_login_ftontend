@@ -6,6 +6,7 @@ from "react";
 
 import axios
 from "axios";
+import { API_URL } from "../config";
 
 const SubAdmin = ()=>{
 
@@ -29,7 +30,7 @@ try{
 const res =
 await axios.get(
 
-"http://localhost:3100/register",
+`${API_URL}/register`,
 
 {
 
@@ -68,7 +69,7 @@ try{
 const res =
 await axios.put(
 
-`http://localhost:3100/register/make-admin/${id}`,
+`${API_URL}/register/make-admin/${id}`,
 
 {},
 
@@ -131,7 +132,7 @@ try{
 
 await axios.put(
 
-`http://localhost:3100/register/remove-admin/${id}`,
+`${API_URL}/register/remove-admin/${id}`,
 
 {},
 

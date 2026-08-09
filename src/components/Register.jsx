@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
 import axios from "axios";
+import { API_URL } from "../config";
 import { useNavigate, Link } from "react-router-dom";
 
 const Register = () => {
@@ -16,7 +17,7 @@ const Register = () => {
     console.log("values ==", values);
     
   axios
-      .post("http://localhost:3100/register/postregister", values)
+      .post(`${API_URL}/register/postregister`, values)
       
       .then(() => {
         alert("Signup Completed");

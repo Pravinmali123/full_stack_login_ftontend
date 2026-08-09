@@ -6,6 +6,7 @@ from "react";
 
 import axios
 from "axios";
+import { API_URL } from "../config";
 
 const Admin=()=>{
 
@@ -23,7 +24,7 @@ try{
 const res=
 await axios.get(
 
-"http://localhost:3100/register"
+`${API_URL}/register`
 
 );
 
@@ -60,7 +61,7 @@ try{
 
 await axios.delete(
 
-`http://localhost:3100/register/deleteregister/${id}`
+`${API_URL}/register/deleteregister/${id}`
 
 );
 
@@ -99,7 +100,7 @@ try{
 
 await axios.patch(
 
-`http://localhost:3100/register/updateregister/${id}`,
+`${API_URL}/register/updateregister/${id}`,
 
 {
 

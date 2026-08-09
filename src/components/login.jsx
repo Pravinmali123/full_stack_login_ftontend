@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import axios from "axios";
+import { API_URL } from "../config";
 import { useNavigate, Link } from "react-router-dom";
 
 const Login = () => {
@@ -31,7 +32,7 @@ try{
 const res =
 await axios.post(
 
-"http://localhost:3100/login/postlogin",
+`${API_URL}/login/postlogin`,
 
 values
 
@@ -142,7 +143,7 @@ try{
 const res =
 await axios.post(
 
-"http://localhost:3100/login/verifyotp",
+`${API_URL}/login/verifyotp`,
 
 {
 
